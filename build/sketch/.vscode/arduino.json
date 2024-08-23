@@ -1,0 +1,8 @@
+#line 1 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\.vscode\\arduino.json"
+{
+    "port": "COM4",
+    "configuration": "usbstack=arduino,debug=off,sercom4=include",
+    "board": "Seeeduino:samd:seeed_XIAO_m0",
+    "output": "./build",
+    "sketch": "DQWalker.ino"
+}

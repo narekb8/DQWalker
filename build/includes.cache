@@ -1,0 +1,162 @@
+[
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\cores\\arduino"
+  },
+  {
+    "Sourcefile": null,
+    "Include": "",
+    "Includepath": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\variants\\XIAO_m0"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "SparkFunLSM6DSO.h",
+    "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\SparkFun_Qwiic_6Dof_-_LSM6DS0\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "Wire.h",
+    "Includepath": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\libraries\\Wire"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "SPI.h",
+    "Includepath": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\libraries\\SPI"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "Adafruit_ZeroDMA.h",
+    "Includepath": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\libraries\\Adafruit_ZeroDMA"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "Adafruit_GFX.h",
+    "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "Adafruit_I2CDevice.h",
+    "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_BusIO"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "BlockNot.h",
+    "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\BlockNot\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "FlashStorage.h",
+    "Includepath": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\libraries\\FlashStorage\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "MemoryFree.h",
+    "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Arduino-MemoryFree"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "Sharp_Color_LCD.h",
+    "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Sharp_Color_LCD"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\Menus.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\Monster.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\Player.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\SparkFun_Qwiic_6Dof_-_LSM6DS0\\src\\SparkFunLSM6DSO.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\libraries\\Wire\\Wire.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\libraries\\SPI\\SPI.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\libraries\\Adafruit_ZeroDMA\\Adafruit_ZeroDMA.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library\\Adafruit_GFX.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library\\Adafruit_GrayOLED.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library\\Adafruit_SPITFT.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_GFX_Library\\glcdfont.c",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_BusIO_Register.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_I2CDevice.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Adafruit_BusIO\\Adafruit_SPIDevice.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\BlockNot\\src\\BlockNot.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\libraries\\FlashStorage\\src\\FlashStorage.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Arduino-MemoryFree\\MemoryFree.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Arduino-MemoryFree\\pgmStrToRAM.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Sharp_Color_LCD\\Sharp_Color_LCD.cpp",
+    "Include": "",
+    "Includepath": null
+  }
+]
