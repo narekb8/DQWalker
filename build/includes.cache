@@ -11,6 +11,16 @@
   },
   {
     "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "ArduinoLowPower.h",
+    "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Arduino_Low_Power\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
+    "Include": "RTCZero.h",
+    "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\RTCZero\\src"
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
     "Include": "SparkFunLSM6DSO.h",
     "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\SparkFun_Qwiic_6Dof_-_LSM6DS0\\src"
   },
@@ -51,11 +61,6 @@
   },
   {
     "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
-    "Include": "MemoryFree.h",
-    "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Arduino-MemoryFree"
-  },
-  {
-    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\DQWalker.ino.cpp",
     "Include": "Sharp_Color_LCD.h",
     "Includepath": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Sharp_Color_LCD"
   },
@@ -76,6 +81,21 @@
   },
   {
     "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\build\\sketch\\Player.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Arduino_Low_Power\\src\\nrf52\\ArduinoLowPower.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Arduino_Low_Power\\src\\samd\\ArduinoLowPower.cpp",
+    "Include": "",
+    "Includepath": null
+  },
+  {
+    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\RTCZero\\src\\RTCZero.cpp",
     "Include": "",
     "Includepath": null
   },
@@ -141,16 +161,6 @@
   },
   {
     "Sourcefile": "C:\\Users\\th3fr\\AppData\\Local\\Arduino15\\packages\\Seeeduino\\hardware\\samd\\1.8.4\\libraries\\FlashStorage\\src\\FlashStorage.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Arduino-MemoryFree\\MemoryFree.cpp",
-    "Include": "",
-    "Includepath": null
-  },
-  {
-    "Sourcefile": "C:\\Users\\th3fr\\OneDrive\\Documents\\Arduino\\libraries\\Arduino-MemoryFree\\pgmStrToRAM.cpp",
     "Include": "",
     "Includepath": null
   },

@@ -18,6 +18,19 @@ Player::Player(bool debug)
         mon[i] = Monster((species)i, random(2));
 }
 
+Player::Player()
+{
+    curr = 0;
+    primary = 0;
+    lifetimeCount = 0;
+    mult = 1;
+
+    size = 1;
+
+    for(int i = 0; i < size; i++)
+        mon[i] = Monster((species)i, random(2));
+}
+
 Monster *Player::getPrimary()
 {
     return &mon[primary];

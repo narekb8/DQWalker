@@ -1,3 +1,4 @@
+#include <ArduinoLowPower.h>
 #include <SparkFunLSM6DSO.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -6,24 +7,21 @@
 #include "Menus.h"
 #include "Monster.h"
 #include "Player.h"
-#include <iterator>
-#include <vector>
 
+// Flash Storage for saving user memory on device (WIP, maybe swap for a tiny ROM chip later?)
 FlashStorage(firstLoad, bool);
 FlashStorage(playerClass, Player);
 
+uint32_t curr = HIGH; // Onboard LED toggle
+BlockNot menuAnim(500); // Animation Cycle Timer
+BlockNot repeatTimer(2); // Software Debounce Timer (WIP, only if necessary)
+BlockNot gameTimer(30, SECONDS); // Game Timer
+BlockNot afkTimer(60, SECONDS); // Auto Sleep Timer
+
 LSM6DSO imu;
-uint32_t curr = HIGH;
-Sharp_Color_LCD display(6);
-BlockNot menuAnim(500);
-BlockNot repeatTimer(2);
-BlockNot gameTimer(30, SECONDS);
-BlockNot afkTimer(60, SECONDS);
+Sharp_Color_LCD display(7);
 Player player;
 Menus menuManager(&gameTimer);
-
-#define BLACK 0
-#define WHITE 1
 
 void setup()
 {
@@ -32,37 +30,47 @@ void setup()
 
     while (GCLK->STATUS.bit.SYNCBUSY);*/
 
+    // Read saved data on device boot.
+    // If previous data exists, load it in. Otherwise create a new Player class and mark that we've created one.
     if(firstLoad.read() == false)
     {
-        player = Player(false);
+        player = Player();
         playerClass.write(player);
+        firstLoad.write(true);
     }
     else
         player = playerClass.read();
 
-    pinMode(13, OUTPUT);
-    pinMode(6, OUTPUT);
-    pinMode(3, INPUT_PULLUP);
-    pinMode(2, INPUT_PULLUP);
-    pinMode(1, INPUT_PULLUP);
-    //pinMode(1, OUTPUT);
+    // Initialize input and output pins
 
-    //digitalWrite(1, HIGH);
+    pinMode(13, OUTPUT); // Onboard LED
+    pinMode(7, OUTPUT); // Display CS
+    pinMode(6, OUTPUT); // Display EN (HIGH Enable, LOW Disable)
+    pinMode(2, INPUT_PULLUP); // Left Button
+    pinMode(1, INPUT_PULLUP); // Center/Confirm Button
+    pinMode(0, INPUT_PULLUP); // Right Button
 
-    attachInterrupt(digitalPinToInterrupt(2), confirmButton, FALLING);
-    attachInterrupt(digitalPinToInterrupt(3), leftButton, FALLING);
-    attachInterrupt(digitalPinToInterrupt(1), rightButton, FALLING);
+    digitalWrite(6, HIGH); 
 
+    // Attach buttons as wakeup interrupts, allowing them to wake the MCU during deep sleep
+    LowPower.attachInterruptWakeup(digitalPinToInterrupt(1), confirmButton, FALLING);
+    LowPower.attachInterruptWakeup(digitalPinToInterrupt(2), leftButton, FALLING);
+    LowPower.attachInterruptWakeup(digitalPinToInterrupt(0), rightButton, FALLING);
+
+    // Initialize accelerometer ICU
     initializeSensor();
 
+    // Initialize display and rotate it if necessary (WIP, will see if needed/the exact rotation)
     display.begin();
     display.setRotation(1);
 
+    // Set display to main menu
     menuManager.changeMenu(front, 0, &display, &player);
 }
 
 void loop()
 {
+    // Menu Animation Timer tasks
     if(menuAnim.triggered())
     {
         curr ^= HIGH;
@@ -71,21 +79,28 @@ void loop()
         readSensor();
     }
 
+    // Game End Screen Timer tasks
     if(menuManager.currMenu == game && gameTimer.triggered())
         menuManager.changeMenu(lb, 0, &display, &player);
 
+    // AFK (Idle) Timer tasks
     if(afkTimer.HAS_TRIGGERED)
     {
-        //digitalWrite(1, LOW);
+        digitalWrite(6, LOW);
+        LowPower.deepSleep();
     }
 }
 
+// The three button callback functions!
+// They all work the exact same way, they just provide different input values to the Menu class
+// If we're in deep sleep mode, wake the display and change to the main menu
+// If not, send a command to the Menu class
 void leftButton()
 {
     if(afkTimer.triggered())
     {
         menuManager.changeMenu(front, 0, &display, &player);
-        //digitalWrite(1, HIGH);
+        digitalWrite(6, HIGH);
     }
     else
     {
@@ -100,7 +115,7 @@ void confirmButton()
     if(afkTimer.triggered())
     {
         menuManager.changeMenu(front, 0, &display, &player);
-        //digitalWrite(1, HIGH);
+        digitalWrite(6, HIGH);
     }
     else
     {
@@ -114,7 +129,7 @@ void rightButton()
     if(afkTimer.triggered())
     {
         menuManager.changeMenu(front, 0, &display, &player);
-        //digitalWrite(1, HIGH);
+        digitalWrite(6, HIGH);
     }
     else
     {
@@ -123,6 +138,7 @@ void rightButton()
     }
 }
 
+// Function to read in the step count, add it to the lifetime total of the player, reset the counter, and save to storage
 void getStepCount()
 {
     imu.writeRegister(FUNC_CFG_ACCESS, 0x80);
@@ -139,10 +155,12 @@ void getStepCount()
 
 void initializeSensor()
 {
+    // Initialize Serial comms for data reporting, will likely be removed in final product
     Serial.begin(115200);
     delay(2500);
     Serial.println("Testing");
 
+    // Connect to the IMU over I2C
     Wire.begin();
     delay(10);
     if( imu.begin() )
@@ -152,6 +170,8 @@ void initializeSensor()
         Serial.println("Freezing");
     }
 
+    // Register functions to initialize the accelerometer with certain settings and reset step counter
+    // I think I got these from the LSM6DSO manual since the library doesn't work properly for me
     imu.writeRegister(FUNC_CFG_ACCESS, 0x80);
     imu.writeRegister(PAGE_RW, 0x40);
     imu.writeRegister(PAGE_SEL, 0x11);
@@ -171,7 +191,7 @@ void initializeSensor()
 
 void readSensor()
 {
-    //Get all parameters
+    // Read in raw accelerometry data
     Serial.print("\nAccelerometer:\n");
     Serial.print(" X = ");
     Serial.println(imu.readFloatAccelX(), 3);
@@ -180,6 +200,7 @@ void readSensor()
     Serial.print(" Z = ");
     Serial.println(imu.readFloatAccelZ(), 3);
 
+    // Read in step count
     Serial.print("\nSteps: ");
     Serial.printf("%d\n", player.lifetimeCount);
     Serial.print("\nFrom Register: ");
@@ -188,5 +209,4 @@ void readSensor()
     imu.readRegisterInt16(&regOut, STEP_COUNTER_L);
     imu.writeRegister(FUNC_CFG_ACCESS, 0x00);
     Serial.printf("%d\n", regOut);
-    Serial.printf("%d\n", digitalRead(9));
 }

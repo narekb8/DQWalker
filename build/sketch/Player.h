@@ -9,6 +9,7 @@ class Player
 {
     public:
         Player(bool);
+        Player();
         uint64_t lifetimeCount;
         uint8_t mult;
         uint8_t size;

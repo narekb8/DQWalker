@@ -1,16 +1,17 @@
 #include <Arduino.h>
 #line 1 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+#include <ArduinoLowPower.h>
 #include <SparkFunLSM6DSO.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <BlockNot.h>
 #include <FlashStorage.h>
-#include <MemoryFree.h>
 #include "Menus.h"
 #include "Monster.h"
 #include "Player.h"
-#include <iterator>
-#include <vector>
+
+FlashStorage(firstLoad, bool);
+FlashStorage(playerClass, Player);
 
 LSM6DSO imu;
 uint32_t curr = HIGH;
@@ -19,35 +20,43 @@ BlockNot menuAnim(500);
 BlockNot repeatTimer(2);
 BlockNot gameTimer(30, SECONDS);
 BlockNot afkTimer(60, SECONDS);
-Player player(false);
+Player player;
 Menus menuManager(&gameTimer);
 
 #define BLACK 0
 #define WHITE 1
 
-#line 26 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+#line 27 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
 void setup();
-#line 54 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+#line 63 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
 void loop();
-#line 73 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+#line 82 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
 void leftButton();
-#line 87 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+#line 96 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
 void confirmButton();
-#line 102 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+#line 111 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
 void rightButton();
-#line 116 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+#line 125 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
 void getStepCount();
-#line 129 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+#line 139 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
 void initializeSensor();
-#line 161 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+#line 171 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
 void readSensor();
-#line 26 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+#line 27 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
 void setup()
 {
     /*GCLK->GENDIV.reg = GCLK_GENDIV_DIV(12) |         // Divide the 48MHz clock source by divisor 12: 48MHz/12=4MHz
                      GCLK_GENDIV_ID(0);            // Select Generic Clock (GCLK) 0
 
     while (GCLK->STATUS.bit.SYNCBUSY);*/
+
+    if(firstLoad.read() == false)
+    {
+        player = Player();
+        playerClass.write(player);
+    }
+    else
+        player = playerClass.read();
 
     pinMode(13, OUTPUT);
     pinMode(6, OUTPUT);
@@ -143,6 +152,7 @@ void getStepCount()
     imu.writeRegister(FUNC_CFG_ACCESS, 0x00);
     player.lifetimeCount += regOut;
     player.updateEXP(regOut);
+    playerClass.write(player);
 }
 
 void initializeSensor()
@@ -197,5 +207,4 @@ void readSensor()
     imu.writeRegister(FUNC_CFG_ACCESS, 0x00);
     Serial.printf("%d\n", regOut);
     Serial.printf("%d\n", digitalRead(9));
-    Serial.println(freeMemory());
 }

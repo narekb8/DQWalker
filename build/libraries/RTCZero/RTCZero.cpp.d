@@ -1,8 +1,13 @@
-C:\Users\th3fr\OneDrive\Desktop\Personal-Projects\DQWalker\build\core\wiring_shift.c.o: \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino\wiring_shift.c \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino\wiring_shift.h \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino\wiring_digital.h \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino\WVariant.h \
+C:\Users\th3fr\OneDrive\Desktop\Personal-Projects\DQWalker\build\libraries\RTCZero\RTCZero.cpp.o: \
+ C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\RTCZero\src\RTCZero.cpp \
+ C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\RTCZero\src\RTCZero.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Arduino.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/avr/pgmspace.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/avr/interrupt.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/avr/dtostrf.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/avr/io.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/binary.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/itoa.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\tools\CMSIS-Atmel\1.2.1/CMSIS-Atmel/CMSIS/Device/ATMEL/sam.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\tools\CMSIS-Atmel\1.2.1/CMSIS-Atmel/CMSIS/Device/ATMEL/samd.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\tools\CMSIS-Atmel\1.2.1/CMSIS-Atmel/CMSIS/Device/ATMEL/samd21/include/samd21.h \
@@ -68,5 +73,36 @@ C:\Users\th3fr\OneDrive\Desktop\Personal-Projects\DQWalker\build\core\wiring_shi
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\tools\CMSIS-Atmel\1.2.1/CMSIS-Atmel/CMSIS/Device/ATMEL/samd21/include/instance/usb.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\tools\CMSIS-Atmel\1.2.1/CMSIS-Atmel/CMSIS/Device/ATMEL/samd21/include/instance/wdt.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\tools\CMSIS-Atmel\1.2.1/CMSIS-Atmel/CMSIS/Device/ATMEL/samd21/include/pio/samd21g18a.h \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino\wiring_private.h \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino\wiring_constants.h
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/wiring_constants.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/WVariant.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/WCharacter.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/WString.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/avr/pgmspace.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Tone.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Arduino.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/WMath.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/HardwareSerial.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Stream.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Print.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Printable.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/pulse.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/delay.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\variants\XIAO_m0/variant.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/SERCOM.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Uart.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/SERCOM.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/RingBuffer.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/wiring.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/wiring_digital.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/wiring_analog.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/wiring_shift.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/wiring_pwm.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/WInterrupts.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/USBDesc.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/USBCore.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/USBAPI.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Stream.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/RingBuffer.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/SAMD21_USBDevice.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/USB_host.h \
+ C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/samd21_host.h

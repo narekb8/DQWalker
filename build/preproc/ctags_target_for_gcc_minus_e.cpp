@@ -8,11 +8,10 @@
 # 8 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino" 2
 # 9 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino" 2
 # 10 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino" 2
-# 11 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino" 2
-# 12 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino" 2
 
+__attribute__((__aligned__(256))) static const uint8_t _datafirstLoad[(sizeof(bool)+255)/256*256] = { }; FlashStorageClass<bool> firstLoad(_datafirstLoad);;
+__attribute__((__aligned__(256))) static const uint8_t _dataplayerClass[(sizeof(Player)+255)/256*256] = { }; FlashStorageClass<Player> playerClass(_dataplayerClass);;
 
-# 13 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
 LSM6DSO imu;
 uint32_t curr = (0x1);
 Sharp_Color_LCD display(6);
@@ -20,7 +19,7 @@ BlockNot menuAnim(500);
 BlockNot repeatTimer(2);
 BlockNot gameTimer(30, BlockNotUnit::sec);
 BlockNot afkTimer(60, BlockNotUnit::sec);
-Player player(false);
+Player player;
 Menus menuManager(&gameTimer);
 
 
@@ -35,7 +34,15 @@ void setup()
 
 
     while (GCLK->STATUS.bit.SYNCBUSY);*/
-# 33 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+# 34 "C:\\Users\\th3fr\\OneDrive\\Desktop\\Personal-Projects\\DQWalker\\DQWalker.ino"
+    if(firstLoad.read() == false)
+    {
+        player = Player();
+        playerClass.write(player);
+    }
+    else
+        player = playerClass.read();
+
     pinMode(13, (0x1));
     pinMode(6, (0x1));
     pinMode(3, (0x2));
@@ -130,6 +137,7 @@ void getStepCount()
     imu.writeRegister(FUNC_CFG_ACCESS, 0x00);
     player.lifetimeCount += regOut;
     player.updateEXP(regOut);
+    playerClass.write(player);
 }
 
 void initializeSensor()
@@ -184,5 +192,4 @@ void readSensor()
     imu.writeRegister(FUNC_CFG_ACCESS, 0x00);
     Serial.printf("%d\n", regOut);
     Serial.printf("%d\n", digitalRead(9));
-    Serial.println(freeMemory());
 }

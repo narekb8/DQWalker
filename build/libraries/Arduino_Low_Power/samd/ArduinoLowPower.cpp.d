@@ -1,5 +1,6 @@
-C:\Users\th3fr\OneDrive\Desktop\Personal-Projects\DQWalker\build\core\IPv6Address.cpp.o: \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino\IPv6Address.cpp \
+C:\Users\th3fr\OneDrive\Desktop\Personal-Projects\DQWalker\build\libraries\Arduino_Low_Power\samd\ArduinoLowPower.cpp.o: \
+ C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\Arduino_Low_Power\src\samd\ArduinoLowPower.cpp \
+ C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\Arduino_Low_Power\src/ArduinoLowPower.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Arduino.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/avr/pgmspace.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/avr/interrupt.h \
@@ -105,7 +106,4 @@ C:\Users\th3fr\OneDrive\Desktop\Personal-Projects\DQWalker\build\core\IPv6Addres
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/SAMD21_USBDevice.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/USB_host.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/samd21_host.h \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/IPv6Address.h \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/WString.h \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Printable.h \
- C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/Print.h
+ C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\RTCZero\src/RTCZero.h

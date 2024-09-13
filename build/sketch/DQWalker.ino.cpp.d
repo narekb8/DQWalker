@@ -105,6 +105,8 @@ C:\Users\th3fr\OneDrive\Desktop\Personal-Projects\DQWalker\build\sketch\DQWalker
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/SAMD21_USBDevice.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/USB_host.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\cores\arduino/USB/samd21_host.h \
+ C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\Arduino_Low_Power\src/ArduinoLowPower.h \
+ C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\RTCZero\src/RTCZero.h \
  C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\SparkFun_Qwiic_6Dof_-_LSM6DS0\src/SparkFunLSM6DSO.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\libraries\Wire/Wire.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\libraries\SPI/SPI.h \
@@ -117,7 +119,6 @@ C:\Users\th3fr\OneDrive\Desktop\Personal-Projects\DQWalker\build\sketch\DQWalker
  C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\Adafruit_BusIO/Adafruit_SPIDevice.h \
  C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\BlockNot\src/BlockNot.h \
  C:\Users\th3fr\AppData\Local\Arduino15\packages\Seeeduino\hardware\samd\1.8.4\libraries\FlashStorage\src/FlashStorage.h \
- C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\Arduino-MemoryFree/MemoryFree.h \
  C:\Users\th3fr\OneDrive\Desktop\Personal-Projects\DQWalker\build\sketch\Menus.h \
  C:\Users\th3fr\OneDrive\Documents\Arduino\libraries\Sharp_Color_LCD/Sharp_Color_LCD.h \
  C:\Users\th3fr\OneDrive\Desktop\Personal-Projects\DQWalker\build\sketch\Monster.h \
