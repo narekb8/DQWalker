@@ -1,4 +1,4 @@
-# Slimewalker
+# DQWalker
 
 A small, Arduino based project to create a Pokewalker-inspired device based on the Slime from Dragon Quest and its variants from Dragon Warrior Monsters II.
 
