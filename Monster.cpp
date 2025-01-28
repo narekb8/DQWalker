@@ -224,7 +224,7 @@ const uint16_t* Monster::getPixelData(uint8_t type, bool frame)
     }
 }
 
-void Monster::pumpEXP(uint16_t count)
+inline void Monster::pumpEXP(uint16_t count)
 {
     if(exp + count < exp)
         exp = UINT32_MAX;
