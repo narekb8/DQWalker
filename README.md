@@ -13,6 +13,6 @@ This was originally made as a birthday gift to my girlfriend which quickly spira
 ## TODO:
 - ~Implement Low Power mode to make the device more battery efficient~
 - ~Wire up the board to work on battery with charging support (likely with a tiny Adafruit board to start)~
-- Create a functional PCB to at least wire up breakout boards to make a functioning device ***PENDING CURRENT PCB***
+- ~Create a functional PCB to at least wire up breakout boards to make a functioning device~
 - Consolidate the above board to be a single, contained device (sans the XIAO)
 - If I'm really feeling confident, include SAMD21 on the PCB
